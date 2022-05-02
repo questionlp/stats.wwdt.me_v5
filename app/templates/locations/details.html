@@ -59,6 +59,15 @@
         </div>
     </div>
 </div>
+
+{% if location.coordinates %}
+<div class="row">
+    <div class="col s12">
+        <div id="map" lat="{{ location.coordinates.latitude }}" lon="{{ location.coordinates.longitude }}">
+        </div>
+    </div>
+</div>
+{% endif %}
 </div>
 {% endif %}
 {% endfor %}
